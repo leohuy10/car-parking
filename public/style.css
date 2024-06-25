@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", "Open sans", sans-serif;
+    height: 100vh;
+
+    background-image: url('images/m.jpg');
+    background-size: cover;
+    /* Make the background cover the entire element */
+    background-repeat: no-repeat;
+    /* Prevent the background image from repeating */
+    background-position: center;
+}
+
+.custom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 125px;
+}
+
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 60px;
+    color: #d35400;
+
+
+}
+
+.h-cus {
+
+    font-size: 45px;
+    margin: 40px;
+    color: #d35400;
+
+}
+
+input[type="text"] {
+    color: #fff;
+}
+
+input[type="password"] {
+    color: #fff;
+}
+
+.form-container {
+    width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.form-group label {
+    font-size: 32px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #d35400;
+
+
+}
+
+
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 24px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: transparent;
+
+}
+
+.submit-btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #d35400;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #050C9C;
+}
+
+a {
+    font-size: 28px;
+    color: #fff;
+}
+
+
+
+.card-link {
+    font-size: 24px;
+}

@@ -1,0 +1,39 @@
+<% layout('layouts/boilerplate')%>
+
+
+    <div class="row">
+        <div class="col-4 offset-4">
+            <div class="card mb-3">
+                <img src="<%=car.image%>" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Brand: <%= car.title%>
+                    </h5>
+                    <h6 class="card-title">License Plate: <%= car.license_plate%>
+
+                    </h6>
+
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        Owner: <%= car.owner%>
+                    </li>
+                    <li class="list-group-item">
+                        Description: <%= car.description%>
+                    </li>
+                    <li class="list-group-item text-muted">
+                        Location: <%= car.location%>
+                    </li>
+                    <li class="list-group-item">Fare: $<%= car.price%>/ticket</li>
+                </ul>
+                <div class="card-body">
+                    <a class="card-link btn btn-info btn-lg" href="/cars/<%=car._id%>/edit">Edit</a>
+                    <form class="d-inline" action="/cars/<%=car._id%>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger btn-lg">Delete</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>

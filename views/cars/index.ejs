@@ -1,0 +1,75 @@
+<% layout('layouts/boilerplate')%>
+
+    <h1>ALL VEHICLE RECORDS</h1>
+
+    <% let Revenue=0 %>
+        <div class="row justify-content-md-center">
+            <div class="col-md-8">
+
+
+                <table class="table table-striped text-center">
+                    <thead class="thead-dark">
+
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tittle</th>
+                            <th scope="col">Owner</th>
+                            <th scope="col">License Plate</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Arrival Time</th>
+                            <th scope="col">View</th>
+                        </tr>
+                    </thead>
+                    <% let count=0 %>
+                        <% for (let car of cars){%>
+                            <% count++; Revenue=Revenue + car.price %>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <%=count%>
+                                        </th>
+                                        <td>
+                                            <%=car.title%>
+                                        </td>
+                                        <td>
+                                            <%=car.owner%>
+                                        </td>
+                                        <td>
+                                            <%=car.license_plate%>
+                                        </td>
+                                        <td>
+                                            <%=car.location%>
+                                        </td>
+                                        <td>
+                                            <%=car.arrival_time%>
+                                        </td>
+                                        <td>
+                                            <a class="nav-link " href="cars/<%=car.id%>">View</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <% }%>
+                </table>
+            </div>
+
+            <div class="col-6 col-md-4  ">
+                <div class="row">
+                    <div class="col offset-2">
+                        <div class="transparent-border-box ">
+                            <h3 class="h1-custom">Parking Lot Infomation</h1>
+                                <h2>Total Space: 50</h2>
+                                <h2>Available Space : <%= 50 - count%>
+                                </h2>
+                                <h2>Revenue: <%= Revenue%>$</h2>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </div>
